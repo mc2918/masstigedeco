@@ -84,13 +84,16 @@
           .search-big {
             display: none;
           }
-          [type="submit"].search-big{
+
+          [type="submit"].search-big {
             display: block;
           }
+
           .search-small {
             display: block;
           }
         }
+
         .utils_fix {
           display: block;
           position: absolute;
@@ -135,6 +138,7 @@
           opacity: 0;
           transition: all 0.3s ease;
         }
+
         &:hover,
         &:focus {
           span {
@@ -206,15 +210,18 @@
     .fix_logo {
       display: none
     }
+
     .search-big {
       position: absolute;
       top: 50%;
       right: 50px;
       transform: translateY(-50%);
     }
+
     .search-small {
       display: none
     }
+
     .utils_fix {
       display: none
     }
@@ -284,8 +291,11 @@
         }
       }
     }
+
     &:hover {
-      .lnb {display: block;}
+      .lnb {
+        display: block;
+      }
     }
   }
 
@@ -594,13 +604,13 @@
 
   section[class^="cont-"] {
     width: 1440px;
-    margin:  0 auto;
+    margin: 0 auto;
     padding: 145px 0;
     box-sizing: border-box;
   }
 
   .cont-1 {
-    
+
     &.media {
       padding-bottom: 0;
 
@@ -657,6 +667,7 @@
   }
 
   .product {
+
     // @for $i from 1 through 8 {
     //   &.on>.item-list>li:nth-child(#{$i}){
     //     top: 0px;
@@ -664,6 +675,7 @@
     //     transition: all .1s #{$i * 0.2}s ease-in;          
     //   }
     // }
+    
     .item-list {
       .item {
         // position: relative;
@@ -678,6 +690,7 @@
         &:nth-child(4n) {
           margin-right: 0;
         }
+
         a {
           display: block;
           width: 100%;
@@ -727,10 +740,11 @@
           }
         }
       }
+
       @include clear-fix;
     }
   }
-  
+
 
   .banr-evnet {
     width: 100%;
@@ -841,13 +855,13 @@
 
   .cont-5 {
 
-  // @for $i from 1 through 4 {
-  //   &.on>.store>li:nth-child(#{$i}){
-  //     top: 0px;
-  //     opacity: 1;
-  //     transition: all .1s #{$i * 0.2}s ease-in;          
-  //   }
-  // }
+    // @for $i from 1 through 4 {
+    //   &.on>.store>li:nth-child(#{$i}){
+    //     top: 0px;
+    //     opacity: 1;
+    //     transition: all .1s #{$i * 0.2}s ease-in;          
+    //   }
+    // }
 
     .store {
 
@@ -939,7 +953,7 @@
         }
 
       }
-      
+
 
       @include clear-fix;
     }
@@ -1490,25 +1504,25 @@
               padding-top: 30px;
               padding-left: 30px;
               transition: 0.2s ease-out;
-  
+
               .tit,
               .sub-tit {
                 font-size: 36px;
                 line-height: 38px;
               }
-  
+
               .tel {
                 margin-top: 5px;
                 font-size: 14px;
               }
             }
-  
+
             &:hover,
             &:focus {
               .tit-wrap {
                 padding-top: 10px;
               }
-  
+
             }
           }
         }
