@@ -1,0 +1,161 @@
+//layout mixin
+@mixin rwd($wid) {
+  @media screen and (max-width: $wid) {
+    @content;
+  }
+}
+
+//float
+@mixin clear-fix() {
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+//margin-left 
+@mixin mg-none() {
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+//button-shape
+@mixin button ($display: block, $width: 100px, $height: 30px, $padding: 3px 10px, $bgColor: transparent, $size: 14px, $fontWeight: 400, $color: #fff) {
+  display: $display;
+  min-width: $width;
+  min-height: $height;
+  padding: $padding;
+  background-color: $bgColor;
+  text-align: center;
+  font-weight: $fontWeight;
+  font-size: $size;
+  color: $color;
+  line-height: $height;
+  font-family: 'Rodots', sans-serif;
+}
+
+
+$sqrt_2: 1.41421356237;
+//iconCancel 
+@mixin iconCancel ($size:21px, $thick:2px, $color: #000, $padding: 0, $position:relative, $display:inline-block ) {
+  position: $position;
+  display: $display;
+  width: $size + $padding*2;
+  height: $size + $padding*2;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: round($size*$sqrt_2 - $thick);
+    height: $thick;
+    background: $color;
+  }
+
+  &::before {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    -webkit-transform: translate(-50%, -50%) rotate(135deg);
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+//transtion for loop
+// @mixin transition(){
+//  @for $i from 1 through 4 {
+//    &:nth-child(#{$i}){
+//      transition: all .2s #{$i * .1}s ease-in;
+//    }
+//  } 
+// }
+
+// animate delay effect
+@mixin animateAll($property, $time, $delay){
+  transition: $property, $time, $delay;
+  -o-transition: $property $time ease $delay;
+  -ms-transition: $property $time ease $delay;
+  -moz-transition: $property $time ease $delay;
+  -webkit-transition: $property $time ease $delay;
+}
+
+//iconAngle
+@mixin iconAngle($direction: 'up', $width: 5px, $height: 10px, $size: 10px, $thick: 2px, $color: #222, $display: inline-block, $position: relative) {
+  position: $position;
+  display: $display;
+  width: $width;
+  height: $height;
+
+  @if ($direction == 'up' or $direction == 'down') {
+      $size: floor($width/$sqrt_2 - 2*$thick);
+      $rate: 2*$height/$width;
+      $margin-top: round($rate*$size/(2*$sqrt_2));
+
+      &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: $size;
+          height: $size;
+
+          @if ($rate == 1) {
+              -webkit-transform: translate(-50%, -50%) rotate(45deg);
+              transform: translate(-50%, -50%) rotate(45deg);
+          } @else {
+              -webkit-transform: translate(-50%, -50%) scale(1, $rate) rotate(45deg);
+              transform: translate(-50%, -50%) scale(1, $rate) rotate(45deg);
+          }
+
+          @if ($direction == 'up') {
+              margin-top: $margin-top;
+              border-top: $thick solid $color;
+              border-left: $thick solid $color;
+
+          } @else if ($direction == 'down') {
+              margin-top: - $margin-top;
+              border-right: $thick solid $color;
+              border-bottom: $thick solid $color;
+          }
+      }
+  } @else if ($direction == 'left' or $direction == 'right') {
+      $size: floor($height/$sqrt_2 - 2*$thick);
+      $rate: 2*$width/$height;
+      $margin-left: round($rate*$size/(2*$sqrt_2));
+
+      &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: $size;
+          height: $size;
+
+          @if ($rate == 1) {
+              -webkit-transform: translate(-50%, -50%) rotate(45deg);
+              transform: translate(-50%, -50%) rotate(45deg);
+          } @else {
+              -webkit-transform: translate(-50%, -50%) scale($rate, 1) rotate(45deg);
+              transform: translate(-50%, -50%) scale($rate, 1) rotate(45deg);
+          }
+
+          @if ($direction == 'left') {
+              margin-left: $margin-left;
+              border-left: $thick solid $color;
+              border-bottom: $thick solid $color;
+
+          } @else if ($direction == 'right') {
+              margin-left: - $margin-left;
+              border-top: $thick solid $color;
+              border-right: $thick solid $color;
+          }
+      }
+  }
+}

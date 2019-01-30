@@ -1,0 +1,52 @@
+
+
+/*color*/
+$red-base: #e00000;
+$white-base: #ffffff;
+$white-lighten: #fafafa;
+$purple-base:#5b1eaa;
+
+//gray
+$gray-base: #222 ;
+$gray-lighten-1: #191919;
+$gray-lighten-2: #313131;
+$gray-lighten-3: #353535;
+$gray-lighten-4: #363636;
+$gray-lighten-5: #424242;
+$gray-lighten-6: #676767;
+$gray-lighten-7: #7d7d7d;
+$gray-lighten-8: #7e7e7e;
+$gray-lighten-9: #808080;
+$gray-lighten-10: #bab9b9;
+$gray-lighten-11: #bbbbbb;
+
+//opacity-color
+$opacityBg: rgba(0,0,0,0.4);
+
+//bg-color
+.gray-ligten-1 { background:$gray-lighten-1 }
+.gray-ligten-2 { background:$gray-lighten-2}
+.gray-ligten-3 { background:$gray-lighten-3}
+.gray-ligten-4 { background:$gray-lighten-4}
+.gray-ligten-5 { background:$gray-lighten-5}
+.gray-ligten-6 { background:$gray-lighten-6}
+.gray-ligten-7 { background:$gray-lighten-7}
+.gray-ligten-8 { background:$gray-lighten-8}
+.gray-ligten-9 { background:$gray-lighten-9}
+.gray-ligten-10 { background:$gray-lighten-10}
+
+//txt-color
+.red-txt {color: $red-base}
+.gray-txt {color: $gray-base}
+.gray-txt-ligten-1 { color:$gray-lighten-1 }
+.gray-txt-ligten-2 { color:$gray-lighten-2}
+.gray-txt-ligten-3 { color:$gray-lighten-3}
+.gray-txt-ligten-4 { color:$gray-lighten-4}
+.gray-txt-ligten-5 { color:$gray-lighten-5}
+.gray-txt-ligten-6 { color:$gray-lighten-6}
+.gray-txt-ligten-7 { color:$gray-lighten-7}
+.gray-txt-ligten-8 { color:$gray-lighten-8}
+.gray-txt-ligten-9 { color:$gray-lighten-9}
+.gray-txt-ligten-10 { color:$gray-lighten-10}
+
+

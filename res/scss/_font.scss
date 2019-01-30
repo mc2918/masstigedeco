@@ -1,0 +1,40 @@
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/**************************************/
+/********* font *********/
+/**************************************/
+
+//HelveticaUltraCompressedL
+@font-face {
+  font-family: "HelveticaUltraCompressedL";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/HelveticaUltraCompressed.eot);
+  src: url(../font/HelveticaUltraCompressed.ttf) format('turetype'),
+       url(../font/HelveticaUltraCompressed.woff) format('woff'),
+       url(../font/HelveticaUltraCompressed.woff2) format('woff2')
+
+}
+
+@font-face {
+  font-family: "HelveticaUltraCompressedM";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../font/HelveticaUltraCompressed.eot);
+  src: url(../font/HelveticaUltraCompressed.ttf) format('turetype'),
+       url(../font/HelveticaUltraCompressed.woff) format('woff'),
+       url(../font/HelveticaUltraCompressed.woff2) format('woff2')
+
+}
+
+@font-face {
+  font-family: "HelveticaUltraCompressedB";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../font/HelveticaUltraCompressed.eot);
+  src: url(../font/HelveticaUltraCompressed.ttf) format('turetype'),
+       url(../font/HelveticaUltraCompressed.woff) format('woff'),
+       url(../font/HelveticaUltraCompressed.woff2) format('woff2')
+}
