@@ -143,7 +143,6 @@ function searchUI() {
 
 //main slide
 mainSlide();
-
 function mainSlide() {
   var myswiper = new Swiper('.carousel', {
     effect: 'fade',
@@ -174,7 +173,6 @@ function mainSlide() {
 
 //media-slide ppl
 mediaSlidePPL();
-
 function mediaSlidePPL() {
   var myswiper = new Swiper('.ppl', {
     direction: 'horizontal',
@@ -193,7 +191,6 @@ function mediaSlidePPL() {
 
 //media-slide news
 mediaSlideNews();
-
 function mediaSlideNews() {
   var myswiper = new Swiper('.news', {
     effect: 'fade',
@@ -212,7 +209,6 @@ function mediaSlideNews() {
 
 //topbtn
 topBtn();
-
 function topBtn() {
   $('.btn-top').on('click', function () {
     var speed = 500;
@@ -223,7 +219,6 @@ function topBtn() {
   });
 
   btnFadeIn();
-
   function btnFadeIn() {
     $(window).on('scroll', function () {
       if ($(this).scrollTop() > 1000) {
@@ -279,6 +274,7 @@ function scrollMotion (){
     pos4 = $('.cont-3').offset().top;
     pos5 = $('.cont-5').offset().top;
   }
+
 
   //pc scrollmotion 
   function matchHeight(){
