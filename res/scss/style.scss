@@ -668,19 +668,19 @@
 
   .product {
 
-    // @for $i from 1 through 8 {
-    //   &.on>.item-list>li:nth-child(#{$i}){
-    //     top: 0px;
-    //     opacity: 1;
-    //     transition: all .1s #{$i * 0.2}s ease-in;          
-    //   }
-    // }
+    @for $i from 1 through 8 {
+      &.on>.item-list>li:nth-child(#{$i}){
+        top: 0px;
+        opacity: 1;
+        transition: all .2s #{$i * 0.2}s ease-in;          
+      }
+    }
     
     .item-list {
       .item {
-        // position: relative;
-        // top: 50px;
-        // opacity: 0;
+        position: relative;
+        top: 50px;
+        opacity: 0;
         float: left;
         display: block;
         width: 337px;
@@ -778,9 +778,8 @@
     background: #eee;
 
     .cont-4 {
-      margin: auto;
-      padding: 0;
-
+      min-width: 1440px;
+      padding-left: 120px;
       @include clear-fix;
 
       .txt-wrap {
@@ -804,6 +803,8 @@
       }
 
       .btn-wrap {
+        overflow: hidden;
+
         li {
           position: relative;
           float: left;
@@ -855,21 +856,21 @@
 
   .cont-5 {
 
-    // @for $i from 1 through 4 {
-    //   &.on>.store>li:nth-child(#{$i}){
-    //     top: 0px;
-    //     opacity: 1;
-    //     transition: all .1s #{$i * 0.2}s ease-in;          
-    //   }
-    // }
+    @for $i from 1 through 4 {
+      &.on>.store>li:nth-child(#{$i}){
+        top: 0px;
+        opacity: 1;
+        transition: all 0.8s #{$i * 0.2}s ease-in-out;          
+      }
+    }
 
     .store {
 
       li {
         overflow: hidden;
         position: relative;
-        // top: 100px;
-        // opacity: 0;
+        top: 100px;
+        opacity: 0;
         float: left;
         width: 710px;
         height: 300px;
@@ -1254,7 +1255,7 @@
             border-bottom: 0;
           }
 
-          .anchor {
+          a.anchor {
             &::before {
               content: '';
               position: absolute;
@@ -1269,7 +1270,7 @@
               transition: all 0.3s;
             }
 
-            &.active::before {
+            &.on::before {
               content: '';
               transform: rotate(180deg);
             }
@@ -1290,11 +1291,15 @@
             padding: 10px 20px;
           }
 
+          &.on {display:block;}
+
         }
 
         .depth-3 {
           display: none;
+          &.on {display: block;}
         }
+
       }
 
       .gnb+ul {
